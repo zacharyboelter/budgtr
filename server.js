@@ -29,8 +29,15 @@ app.get('/budgets', (req, res) => {
 });
 
 // new
+app.get('/budgets/new', (req, res) => {
+    res.render(new.ejs);
+});
 
 // create
+app.post('/budgets', (req, res) => {
+    ledger.push(req.body);
+    res.redirect('/budgets');
+});
 
 // show
 app.get('/budgets/:index', (req, res) => {

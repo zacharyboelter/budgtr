@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biscoff Bikkies</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/bakedGoods/new">Create a New Bakery Item</a>
+    </nav>
+
+    <h1 class="title">Biscoff index page</h1>
+    <ul>
+        <% for(let i=0; i < bakedGoods.length; i++) { %>
+            <li class="is-size-5 has-text-weight-light">
+                <a href="/bakedGoods/<%= i %>">
+                    <%= bakedGoods[i].name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>
