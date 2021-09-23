@@ -35,7 +35,7 @@ app.get('/budgets/new', (req, res) => {
 
 // create
 app.post('/budgets', (req, res) => {
-    ledger.push(req.body);
+    budget.push(req.body);
     res.redirect('/budgets');
 });
 
