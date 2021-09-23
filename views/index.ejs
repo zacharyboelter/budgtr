@@ -11,19 +11,28 @@
 
 <body>
     <div class="container">
-        <h1>Budgtr App</h1>
+        <h1>Budgtr</h1>
+
+        <table>
+            <% for(let i=0; i < ledger.length; i++) { %>
+                <tr>
+
+                    <td>
+
+                        <%= ledger[i].date %>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <%= ledger[i].name %>
+                        </a>
+                    </td>
+                    <td>
+                        <%= ledger[i].amount %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
     </div>
-    <table>
-        <% for(let i=0; i < ledger.length; i++) { %>
-            <tr>
-
-                <td>
-                    <%= ledger[i].name %>
-                </td>
-            </tr>
-            <% } %>
-    </table>
-
 </body>
 
 </html>
