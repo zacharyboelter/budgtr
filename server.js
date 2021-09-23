@@ -30,7 +30,7 @@ app.get('/budgets', (req, res) => {
 
 // new
 app.get('/budgets/new', (req, res) => {
-    res.render(new.ejs);
+    res.render('new.ejs');
 });
 
 // create
