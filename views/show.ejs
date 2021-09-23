@@ -4,12 +4,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Biscoff BakedGoods</title>
+    <title>Budgtr Show</title>
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
 </head>
 
 <body>
+    <div>
+        <h1>
+            <%=ledger.name %>
+        </h1>
+
+        <h3>date </h3>
+        <%=ledger.date %>
+
+            <h3>name</h3>
+            <%=ledger.name %>
+
+                <h3>from </h3>
+                <%=ledger.from %>
+
+                    <h3>amount</h3>
+                    <%=ledger.amount %>
+
+                        <h3>tags</h3>
+                        <%=ledger.tags %>
+
+                            <br>
+                            <button href="/budgets">Back</button>
+    </div>
 
 </body>
 
