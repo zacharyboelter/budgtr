@@ -22,7 +22,7 @@
                         <%= ledger[i].date %>
                     </td>
                     <td>
-                        <a href="#">
+                        <a href="/budgets/<%= i %>">
                             <%= ledger[i].name %>
                         </a>
                     </td>
@@ -32,7 +32,7 @@
                 </tr>
                 <% } %>
         </table>
-        <button href="/budget/new">Add New</button>
+        <button><a href="/budgets/new">Add New</a></button>
     </div>
 </body>
 
