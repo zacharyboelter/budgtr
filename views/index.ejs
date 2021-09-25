@@ -12,13 +12,34 @@
 <body>
     <div class="container">
         <h1>Budgtr</h1>
-
+        <h3>
+            <!-- create and set bank to 0 -->
+            <% let bankAccount=0 %>
+                <!-- parsedInt,  add new items to list and compute values-->
+                <% ledger.forEach((item)=> { bankAccount = bankAccount + parseInt(item.amount)}) %>
+                    <!-- if less: red -->
+                    <% if (bankAccount < 0) { %>
+                        <style>
+                            body {
+                                background-color: #ffadad;
+                            }
+                        </style>
+                        <!--  if more: green  -->
+                        <% } else if (bankAccount> 1000) { %>
+                            %><style>
+                                body {
+                                    background-color: #caffbf;
+                                }
+                            </style>
+                            <%}%>
+                                <!-- print new value -->
+                                Account Balance <%= bankAccount %>
+        </h3>
         <table>
+            <!-- print each stored item to table -->
             <% for(let i=0; i < ledger.length; i++) { %>
                 <tr>
-
                     <td>
-
                         <%= ledger[i].date %>
                     </td>
                     <td>
